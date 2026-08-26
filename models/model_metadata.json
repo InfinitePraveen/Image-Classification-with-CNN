@@ -1,0 +1,21 @@
+{
+  "input_shape": [
+    32,
+    32,
+    3
+  ],
+  "classes": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "normalization": "divide pixels by 255",
+  "framework": "TensorFlow/Keras"
+}
