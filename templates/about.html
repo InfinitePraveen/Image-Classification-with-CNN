@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · CIFAR-10 CNN</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="container narrow">
+    <section class="card">
+      <p class="eyebrow">About</p>
+      <h1>Image Classification with CNN</h1>
+      <p>This educational project trains a convolutional neural network with TensorFlow/Keras on CIFAR-10.</p>
+      <ul>
+        <li>32×32 RGB images</li>
+        <li>10 object classes</li>
+        <li>Data augmentation during training</li>
+        <li>Flask inference API and web interface</li>
+      </ul>
+      <a class="button-link" href="{{ url_for('index') }}">← Back to classifier</a>
+    </section>
+  </main>
+</body>
+</html>
