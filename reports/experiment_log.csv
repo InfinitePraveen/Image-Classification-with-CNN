@@ -1,0 +1,2 @@
+experiment,augmentation,epochs,batch_size,learning_rate,val_accuracy,notes
+baseline,no,30,128,0.001,,
