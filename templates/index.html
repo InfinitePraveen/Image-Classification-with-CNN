@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIFAR-10 CNN Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">TensorFlow · Keras · CNN</p>
+      <h1>CIFAR-10 Image Classifier</h1>
+      <p>Upload an image and let the trained CNN predict one of ten CIFAR-10 object categories.</p>
+      <nav><a href="{{ url_for('about') }}">About the project</a></nav>
+    </header>
+
+    <section class="card">
+      <div class="status {{ 'ready' if model_ready else 'warning' }}">
+        {% if model_ready %}
+          Model ready for predictions
+        {% else %}
+          Model not found — train/export it from the notebooks first
+        {% endif %}
+      </div>
+
+      <form id="prediction-form">
+        <label class="dropzone" for="image-input">
+          <input id="image-input" name="image" type="file" accept="image/png,image/jpeg,image/webp" required>
+          <span class="drop-title">Choose an image</span>
+          <span class="drop-help">PNG, JPG or WEBP · max 5 MB</span>
+        </label>
+        <img id="preview" class="preview hidden" alt="Selected image preview">
+        <button id="predict-button" type="submit">Classify Image</button>
+      </form>
+
+      <div id="loading" class="hidden">Running CNN inference…</div>
+      <div id="result" class="result hidden"></div>
+      <div id="error" class="error hidden"></div>
+    </section>
+
+    <footer>
+      <span>Image Classification with CNN</span>
+      <a href="https://github.com/InfinitePraveen">GitHub</a>
+      <a href="https://www.linkedin.com/in/infinitepraveen/">LinkedIn</a>
+    </footer>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
