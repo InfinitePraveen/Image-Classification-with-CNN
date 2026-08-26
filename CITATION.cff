@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Image Classification with CNN"
+message: "If you use this project, please cite the repository."
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Praveen
+repository-code: "https://github.com/InfinitePraveen/Image-Classification-with-CNN"
+license: MIT
